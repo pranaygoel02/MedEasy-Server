@@ -28,10 +28,10 @@ const userSchema = new Schema({
         type: String,
         
     },
-    imgName: {
-        type: String,
+    // imgName: {
+    //     type: String,
         
-    },
+    // },
     description: {
         type: String,
     },
@@ -52,6 +52,15 @@ const userSchema = new Schema({
     address: {
         type: String,
     },
+    city: {
+        type: String,
+    },
+    state: {
+        type: String,
+    },
+    country: {
+        type: String,
+    },
     phone: {
         type: Number,
     },
@@ -60,11 +69,11 @@ const userSchema = new Schema({
         timeTo:  String
     },
     days: [String],
-    roomId: {
-        type: String,
-        unique: true,
-        default: () => `${nanoid()}`,
-    },
+    // roomId: {
+    //     type: String,
+    //     unique: true,
+    //     default: () => `${nanoid()}`,
+    // },
 },{timestamps: true})
 
 module.exports = mongoose.model('User', userSchema);
